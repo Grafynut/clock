@@ -1,0 +1,271 @@
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+  height: 100vh;
+  background-color: #141414;
+}
+
+.Buttons {
+  width: 100%;
+  height: -webkit-min-content;
+  height: -moz-min-content;
+  height: min-content;
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin: 2rem 0;
+  padding: 0 1.5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.Buttons .navigation {
+  width: -webkit-min-content;
+  width: -moz-min-content;
+  width: min-content;
+  height: -webkit-min-content;
+  height: -moz-min-content;
+  height: min-content;
+  padding: 1rem 2rem;
+  margin: 0 1rem;
+  font-size: 1.6rem;
+  background-color: #141414;
+  color: #fff;
+  border-radius: 1rem;
+  cursor: pointer;
+  border: 2px solid #141414;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.Buttons .navigation:hover {
+  border: 2px solid #c70000;
+}
+
+.Buttons .active {
+  border: 2px solid #c70000;
+}
+
+.func {
+  width: 50rem;
+  height: 50rem;
+  display: none;
+}
+
+.clockBody {
+  width: 50rem;
+  height: 50rem;
+  background-color: #141414;
+  border-radius: 50%;
+  margin: 2rem;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  place-items: center;
+  -webkit-box-shadow: 0 7px 7px 0 #000000e1, inset 0px -2px 12px 0px #ffffff59, inset 0px 0px 10px 17px #0000009d;
+          box-shadow: 0 7px 7px 0 #000000e1, inset 0px -2px 12px 0px #ffffff59, inset 0px 0px 10px 17px #0000009d;
+}
+
+.clockBody .digitalTime {
+  position: absolute;
+  padding: 0.666rem 2rem;
+  background-color: #141414;
+  border: 2px solid #c70000;
+  border-radius: 50%;
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+  font-size: 4rem;
+  color: #fff;
+  z-index: 2;
+}
+
+.clockBody .digitalTime span {
+  font-size: 1.5rem;
+}
+
+.clockBody .digitalTime span label {
+  font-size: 1.1rem;
+}
+
+.clockBody .hands {
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  place-items: center;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 1;
+}
+
+.clockBody .hands .bigHand {
+  width: 0.3rem;
+  height: 22rem;
+  background-color: #c70000;
+  border-top-left-radius: 0.15rem;
+  border-top-right-radius: 0.15rem;
+  position: absolute;
+}
+
+.clockBody .hands .midiumHand {
+  width: 0.8rem;
+  height: 17rem;
+  background-color: #fff;
+  border-top-left-radius: 0.4rem;
+  border-top-right-radius: 0.4rem;
+  position: absolute;
+}
+
+.clockBody .hands .smallHand {
+  width: 1.5rem;
+  height: 14rem;
+  background-color: #fff;
+  border-top-left-radius: 0.75rem;
+  border-top-right-radius: 0.75rem;
+  position: absolute;
+}
+
+.clockBody .d {
+  width: -webkit-min-content;
+  width: -moz-min-content;
+  width: min-content;
+  height: -webkit-min-content;
+  height: -moz-min-content;
+  height: min-content;
+  color: #fff;
+  font-size: 4rem;
+  position: absolute;
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+}
+
+.stopWatch {
+  margin: 2rem 0;
+  display: none;
+  place-items: center;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.stopWatch .Timing {
+  color: #fff;
+  font-size: 9rem;
+}
+
+.stopWatch .history {
+  width: 100%;
+  height: -webkit-min-content;
+  height: -moz-min-content;
+  height: min-content;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  place-items: center;
+}
+
+.stopWatch .history .hist {
+  width: -webkit-min-content;
+  width: -moz-min-content;
+  width: min-content;
+  height: -webkit-min-content;
+  height: -moz-min-content;
+  height: min-content;
+  font-size: 2rem;
+  color: #fff;
+  text-align: center;
+  position: relative;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.stopWatch .switchs {
+  width: -webkit-min-content;
+  width: -moz-min-content;
+  width: min-content;
+  height: -webkit-min-content;
+  height: -moz-min-content;
+  height: min-content;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.stopWatch .switchs .switch {
+  width: 4rem;
+  height: 4rem;
+  min-width: 3rem;
+  min-height: 3rem;
+  background-color: #141414;
+  -webkit-box-shadow: 0 5px 5px 0 #000000e1, inset 0px -2px 5px 0px #ffffff59;
+          box-shadow: 0 5px 5px 0 #000000e1, inset 0px -2px 5px 0px #ffffff59;
+  margin: 0 1.5rem;
+  border-radius: 50%;
+  cursor: pointer;
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+  font-size: 2.1rem;
+  color: #fff;
+}
+
+.stopWatch .switchs .switch:active {
+  -webkit-box-shadow: 0 0px 0px 0 #000000e1, inset 0px 0px 3px 0px #ffffff59;
+          box-shadow: 0 0px 0px 0 #000000e1, inset 0px 0px 3px 0px #ffffff59;
+  font-size: 1.9rem;
+  color: #c70000;
+}
+
+.stopWatch .switchs .active {
+  -webkit-box-shadow: 0 0px 0px 0 #000000e1, inset 0px 0px 3px 0px #ffffff59;
+          box-shadow: 0 0px 0px 0 #000000e1, inset 0px 0px 3px 0px #ffffff59;
+  font-size: 1.9rem;
+  color: #c70000;
+}
+/*# sourceMappingURL=style.css.map */
